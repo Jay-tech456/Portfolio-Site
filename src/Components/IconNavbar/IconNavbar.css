@@ -1,0 +1,35 @@
+.icon-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 80px; /* Adjust the width as needed */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.icon-navbar ul {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-navbar li {
+    margin: 20px 0;
+}
+
+.icon-navbar a {
+    color: #94FFD8;
+    font-size: 2rem;
+}
+
+.icon-navbar a:hover {
+    color: #ddd;
+}

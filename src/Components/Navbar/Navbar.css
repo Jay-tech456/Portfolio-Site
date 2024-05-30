@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap');
+
+
+.logo {
+    position: relative;
+    font-size: 4rem;
+    color: #94FFD8;
+    font-weight: 600;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-color);
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    /* Adjust Keyframe annimation */
+    animation: slideRight 2s ease forwards;     
+}
+
+.navbar a {
+    font-size: 2.0rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 7rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    display: none;
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+
+
+/* ****************** Resume Button ********************** */
+.Resume {
+    outline-style: solid;
+    outline-color: #94FFD8;
+    width: 80%; 
+    padding: 10px;
+}
+/* **************** Sliding Animation ****************************** */
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(20);
+    }
+}
+
+
+
+/* Make the app mobile friendly  */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 2rem;
+        background: var(--second-bg-color);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        transition: left 0.3s;
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+}
