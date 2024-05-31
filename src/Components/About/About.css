@@ -3,14 +3,10 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-
 .About {
     display: flex;
     flex-direction: row;
-    float: right;
-    justify-content:space-around
-
-    
+    justify-content:space-between;
 }
 
 .about-content {
@@ -36,9 +32,6 @@ section {
 .about-content p span {
    color:#94FFD8
 }
-
-
-
 
 .profile-image {
     flex-shrink: 0;
