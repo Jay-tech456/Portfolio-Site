@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCards from './ProjectCards';
+import "./NotableProjects.css"
 
 export default function NotableProjects() {
   return (
@@ -9,7 +10,7 @@ export default function NotableProjects() {
           <ProjectCards 
             image="0000"
             alt="Image of something"
-            title="Title"
+            title="Amazon Wishlist"
             description="Project Description"
           />
 
@@ -17,14 +18,14 @@ export default function NotableProjects() {
             <ProjectCards 
             image="0000"
             alt="Image of something"
-            title="Title"
+            title="Pokemon API"
             description="Project Description"
           />
 
         <ProjectCards 
             image="0000"
             alt="Image of something"
-            title="Title"
+            title="Countries I Visited"
             description="Project Description"
           />
         </div>
