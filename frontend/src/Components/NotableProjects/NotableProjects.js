@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCards from './ProjectCards';
-// import "../styles/NotableProjects.css"
+import "../../styles/NotableProjects.css";
 
 export default function NotableProjects() {
   return (

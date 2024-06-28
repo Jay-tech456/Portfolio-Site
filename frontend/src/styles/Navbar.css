@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap');
 
 
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
 .logo {
     position: relative;
     font-size: 4rem;
     color: #94FFD8;
     font-weight: 600;
     animation: slideRight 1s ease forwards;
+    height: 130px;
+    margin: 0%;
 }
 
 .navbar-container {
@@ -16,17 +26,20 @@
     background: var(--bg-color);
     padding: 1rem 2rem;
     z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    /* Adjust Keyframe annimation */
     animation: slideRight 2s ease forwards;     
 }
 
 .navbar a {
-    font-size: 2.0rem;
+    font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 500;
     margin-left: 7rem;
@@ -45,8 +58,6 @@
     color: var(--text-color);
 }
 
-
-
 /* ****************** Resume Button ********************** */
 .Resume {
     outline-style: solid;
@@ -54,6 +65,7 @@
     width: 80%; 
     padding: 10px;
 }
+
 /* **************** Sliding Animation ****************************** */
 @keyframes slideRight {
     from {
@@ -62,13 +74,12 @@
     }
     to {
         opacity: 1;
-        transform: translateX(20);
+        transform: translateX(0);
     }
 }
 
 
-
-/* Make the app mobile friendly  */
+/* Make the app mobile friendly */
 @media (max-width: 768px) {
     #menu-icon {
         display: block;
@@ -93,5 +104,18 @@
     .navbar a {
         margin: 1rem 0;
         font-size: 2rem;
+    }
+
+    .icon-navbar {
+        top: 80px; /* Adjust as needed for mobile */
+        width: 60px;
+    }
+
+    .icon-navbar a {
+        font-size: 1.5rem;
+    }
+
+    .icon-navbar li {
+        margin: 15px 0;
     }
 }

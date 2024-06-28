@@ -1,10 +1,12 @@
 import React from "react";
 import "../styles/Navbar.css"; 
+import Logo from "./Images/MPLogo.png"
 
 export default function Navbar() { 
     return ( 
         <div className="navbar-container">
-            <a href="#" className="logo">MP.<span className="animate" style={{ '--i': 1 }}></span></a>
+          <span className="animate" style={{ '--i': 1 }}><img  className = "logo" src={Logo} alt="Logo" /></span>
+
 
             <div className="bx bx-menu" id="menu-icon"><span className="animate" style={{ '--i': 2 }}></span></div>
 
