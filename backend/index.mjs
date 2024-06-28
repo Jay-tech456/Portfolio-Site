@@ -29,7 +29,7 @@ async function startServer() {
     try {
         await client.connect();
         console.log("Connected to MongoDB Atlas");
-        db = client.db("PersonalProjects"); // Use the specified database
+        db = client.db("PersonalProjects");
         app.listen(port, () => {
             console.log(`Server running on port ${port}`);
         });
