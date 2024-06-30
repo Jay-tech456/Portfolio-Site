@@ -54,12 +54,10 @@
 
 .project-info {
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(17, 46, 66, 0.3);
     z-index: 2;
-  
     text-align: center;
 }
-
 .project-title {
     font-size: 3.5rem;
 }
@@ -75,12 +73,17 @@
 }
 
 .project-toolstack ul {
-    list-style: none;
-    text-align: center;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-evenly; /* Ensure even spacing */
+    padding: 0; /* Remove default padding */
+    list-style-type: none; /* Remove default list styling */
 }
 
 .project-toolstack ul li {
-    display: inline;
     margin-right: 10px;
+    color: #94FFD8;
+}
+
+.project-toolstack ul li:last-child {
+    margin-right: 0;
 }

@@ -11,7 +11,7 @@ const Home = () => {
           <span className="animate" style={{ "--i": 3 }}></span>
         </div>
         <p>
-          I am a Bay Area based Software Engineer who has experience creating amazing Fullstack Applications. 
+          A Bay Area based Software Engineer who has some experience creating amazing Fullstack Websites. 
           <span className="animate" style={{ "--i": 4 }}></span>
         </p>
         <p>
@@ -19,8 +19,8 @@ const Home = () => {
           <span className="animate" style={{ "--i": 4 }}></span>
         </p>
         <div className="btn-box">
-          <a href="#" className="btn">Hire Me</a>
-          <a href="#" className="btn">Let's Talk</a>
+          <a href="" className="btn">Hire Me</a>
+          <a href="" className="btn">Let's Chat</a>
           <span className="animate" style={{ "--i": 5 }}></span>
         </div>
       </div>

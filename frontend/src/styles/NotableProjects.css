@@ -1,5 +1,33 @@
-Card{
-    border-radius: 10%;
-    background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+.notable-projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.project-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust gap between cards */
+ 
+}
+
+.ProjectCards {
+
+  padding: 20px;
+  border-radius: 10px;
+  background-color: black;
+}
+
+
+.cardItem{ 
+  background-color: black;
+}
+
+
+@media(max-width:844px){ 
+  .notable-projects-container{ 
+    display: none;
+  }
+
 }

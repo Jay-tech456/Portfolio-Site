@@ -51,7 +51,7 @@ section {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 80px; /* Adjust the width as needed */
+    width: 80px; 
     height: auto;
     display: flex;
     flex-direction: column;
@@ -119,6 +119,6 @@ section {
     }
 
     .content {
-        padding-left: 80px; /* Adjust based on navbar width */
+        padding-left: 80px;
     }
 }

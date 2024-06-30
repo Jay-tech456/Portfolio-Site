@@ -106,16 +106,4 @@ body {
         font-size: 2rem;
     }
 
-    .icon-navbar {
-        top: 80px; /* Adjust as needed for mobile */
-        width: 60px;
-    }
-
-    .icon-navbar a {
-        font-size: 1.5rem;
-    }
-
-    .icon-navbar li {
-        margin: 15px 0;
-    }
 }

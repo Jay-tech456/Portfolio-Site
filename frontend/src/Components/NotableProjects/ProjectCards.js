@@ -4,15 +4,16 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import "../../styles/NotableProjects.css"; 
 
-export default function ProjectCards({ image, alt, title, description }) {
+export default function ProjectCards({ image, alt, title, description, link}) {
   return (
     <div>
-      <Card sx={{ maxWidth: 345 }}>
-      <Typography gutterBottom variant="h2" component="div">
+      <Card sx={{ Width: 600 }} className="ProjectCards">
+        <CardActionArea className = "cardItem">
+        <Typography gutterBottom variant="h2" component="div">
               {title}
             </Typography>
-        <CardActionArea>
           <CardMedia
             component="img"
             height="140"
@@ -25,6 +26,7 @@ export default function ProjectCards({ image, alt, title, description }) {
             </Typography>
           </CardContent>
         </CardActionArea>
+        <a href= {link} target="_blank" rel="noopener noreferrer"><i className="fab fa-github fa-shake fa-lg"></i></a>
       </Card>
     </div>
   );
