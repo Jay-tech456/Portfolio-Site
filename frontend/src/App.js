@@ -7,6 +7,7 @@ import IconNavbar from './Components/IconNavbar';
 import Experience from './Components/Experience';
 import Project from "./Components/Project/Project"; 
 import NotableProjects from './Components/NotableProjects/NotableProjects';
+import Eduction from './Components/Education/Education';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Home />
         <About />
         <Experience />
+        <Eduction />
         <Project />
         <NotableProjects />
       </div>

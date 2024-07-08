@@ -1,40 +1,31 @@
 // src/hooks/useScrollAnimation.js
 import { useEffect } from 'react';
 
-const useScrollAnimation = () => {
+const useScrollAnimation = (elementRef) => {
   useEffect(() => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('header nav a');
-
     const handleScroll = () => {
-      const top = window.scrollY;
-      sections.forEach((sec) => {
-        const offset = sec.offsetTop - 100;
-        const height = sec.offsetHeight;
-        const id = sec.getAttribute('id');
-        if (top >= offset && top < offset + height) {
-          navLinks.forEach((link) => {
-            link.classList.remove('active');
-            document.querySelector(`header nav a[href*=${id}]`).classList.add('active');
-          });
-          sec.classList.add('show-animate');
+      const elements = elementRef.current.querySelectorAll('.education-content');
+      elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          element.classList.add('show');
         } else {
-          sec.classList.remove('show-animate');
+          element.classList.remove('show');
         }
       });
-
-      const header = document.querySelector('header');
-      header.classList.toggle('sticky', window.scrollY > 100);
-
-      const footer = document.querySelector('footer');
-      footer.classList.toggle('show-animate', window.innerHeight + window.scrollY >= document.documentElement.scrollHeight);
     };
 
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+
+    // Initial check
+    handleScroll();
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
     };
-  }, []);
+  }, [elementRef]);
 };
 
 export default useScrollAnimation;
