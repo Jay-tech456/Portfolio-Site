@@ -1,8 +1,9 @@
 /* Centering the card */
 .center-container {
   display: flex;
+  text-align: center;
   align-items: center;
-  height: 59vh; /* Adjust this as needed */
+  height: 59vh;
   
   
 }
@@ -13,8 +14,7 @@
  
   border-radius: 10px;
   max-width: 600px;
-  margin-left: 20px;
-  margin-right: 0;
+
   z-index: 1;
   
 }
@@ -37,10 +37,6 @@
   margin-top: 10px;
 }
 
-
-.txt{ 
-  width: 400px;
-}
 .authors{ 
   text-align: center;
   color:aquamarine;

@@ -20,7 +20,10 @@ export default function Education() {
                 <EducationContent
                   year={edu.year}
                   degree={edu.degree}
+                  institution = {edu.institution}
                   description={edu.description}
+                  coursework = {edu.coursework}
+                  extraciriculat= {edu.extracurricular}
                 />
               </div>
             ))}

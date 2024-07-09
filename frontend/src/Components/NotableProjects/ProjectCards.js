@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
@@ -37,7 +36,7 @@ export default function ProjectCards({ image, alt, title, description, githubLin
               </IconButton>
             </Link>
             <Link href={projectLink} target="_blank" rel="noopener">
-              <IconButton aria-label="project" className="project-icon" sx={{ color: '#ccd6f6'}}>
+              <IconButton aria-label="project" className="project-icon" sx={{ color: '#ccd6f6', size:'large'}}>
                 <OpenInNewIcon />
               </IconButton>
             </Link>
@@ -46,7 +45,7 @@ export default function ProjectCards({ image, alt, title, description, githubLin
       <Card className="project-card" sx={{ backgroundColor: '#0a192f'}}>
         <CardMedia
           component="img"
-          height="400px"
+          height="410px"
           image={image}
           alt={alt}
           className="project-image"

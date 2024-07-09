@@ -1,18 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Experience.css";
 import experience from "../Hooks/Experience";
 
 export default function Experience() {
   const [currentExperience, setCurrentExperience] = useState(experience.kismet);
+  const [fade, setFade] = useState(false);
 
+        // Event Handler for react keypress
   const handleExperienceClick = (experienceKey) => {
-    setCurrentExperience(experience[experienceKey]);
+
+      // in case the end user clicks the same button twice
+    if(experience[experienceKey] === currentExperience){ 
+      return; 
+    }
+    setFade(true);
+    setTimeout(() => {
+      setCurrentExperience(experience[experienceKey]);
+      setFade(false);
+    }, 200);
   };
 
   return (
     <div>
       <section id="Experience">
-        <h1 >02. Where Have I Worked</h1>
+        <h1>02. My Work Adventure</h1>
         <div className="experience-container">
           <div className="sidebar">
             <button onClick={() => handleExperienceClick('kismet')}>Kismet.XYZ</button>
@@ -21,7 +32,8 @@ export default function Experience() {
             <button onClick={() => handleExperienceClick('freelancer')}>Fullstack Freelancer</button>
             <button onClick={() => handleExperienceClick('ripplematch')}>RippleMatch Internship</button>
           </div>
-          <div className="content">
+          <div className={`content ${fade ? 'fade-out' : 'fade-in'}`}>
+            <h3 className="date">{currentExperience.date}</h3>
             <h2>{currentExperience.title}</h2>
             <ul className="Description">
               {currentExperience.description.map((desc, index) => (
@@ -29,7 +41,7 @@ export default function Experience() {
               ))}
             </ul>
             <h3>Technologies I have worked with:</h3>
-            <ul className = "tools">
+            <ul className="tools">
               {currentExperience.technologies.map((tech, index) => (
                 <li key={index}>{tech}</li>
               ))}

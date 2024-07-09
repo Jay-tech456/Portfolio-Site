@@ -47,23 +47,42 @@ section {
     position: relative;
     z-index: 1;
 }
-
-.profile-image .circle-spin {
+.forward-circle-spin {
     position: absolute;
     top: 22%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(0);
-    width: 115%;
-    height: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 100%;
     border-top: .2rem solid var(--second-bg-color);
     border-bottom: .2rem solid var(--second-bg-color);
-    border-left: .2rem solid var(--main-color);
-    border-right: .2rem solid var(--main-color);
-    animation: aboutSpinner 8s linear infinite;
     z-index: 0;
+    animation: aboutSpinner linear infinite;
 }
 
+.circle-spin-blue {
+    width: 115%;
+    height: 50%;
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+    animation-duration: 8s;
+}
+
+.circle-spin-green{
+    width: 105%;
+    height: 46%;
+    border-left: .2rem solid #94FFD8;
+    border-right: .2rem solid #94FFD8;
+    animation-duration: 3s;
+    animation-direction: reverse;
+}
+.circle-spin-yellow {
+    width: 125%;
+    height: 55%;
+    border-left: .2rem solid #F9E2AF;
+    border-right: .2rem solid #F9E2AF;
+    animation-duration: 5s;
+    animation-direction: reverse;
+}
 @keyframes aboutSpinner {
     100% {
         transform: translate(-50%, -50%) rotate(360deg);

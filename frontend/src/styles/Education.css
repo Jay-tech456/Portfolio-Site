@@ -7,7 +7,6 @@
   font-weight: 700;
   line-height: 1.3;
   color: #fff;
- 
   width: 100%;
   margin: 0 auto;
   padding: 20px 0;
@@ -83,7 +82,8 @@
 
 .education-content .content h3 {
   font-size: 2.3rem;
-  padding-left: 2rem;
+  padding-left: 1rem;
+  padding-top: 40px;
 }
 
 .content p {
@@ -95,4 +95,25 @@
 .animate .scroll {
   transition-delay: calc(.3s * var(--i));
   width: 0;
+}
+.education-content .content h4 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-left: 20px;
+}
+
+.coursework {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.coursework li {
+  list-style: none;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 2.0 rem;
 }

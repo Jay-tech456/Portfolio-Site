@@ -1,5 +1,31 @@
+/* Add keyframes for fade in and fade out */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-out;
+}
+
+/* Existing styles */
 #Experience {
   padding: 20px;
   color: white;
@@ -29,16 +55,15 @@
 .sidebar {
   width: 200px;
   border-radius: 5%;
-  background-color: #222;
+  background-color: rgba(34, 34, 34, 0.15); 
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-
 }
 
 .sidebar button {
-  background-color: #444;
+  background-color: rgba(74, 74, 74, 0.1); 
   border-radius: 5%;
   color: #fff;
   border: none;
@@ -66,18 +91,20 @@
   margin-bottom: 10px;
 }
 
+li { 
+  font-size: large;
+}
 
-h3{ 
-  margin-top: 2.5%;;
+h3 { 
   color: #94FFD8;
+  margin-bottom: 2rem;
 }
 
-h2{ 
-  color:var(--main-color)
+h2 { 
+  color: var(--main-color);
 }
 
-
- .Description ul, li{ 
+.Description ul, li { 
   list-style: none;
 }
 
@@ -88,31 +115,30 @@ h2{
   list-style: none; /* Remove default list style */
   padding: 0; /* Remove default padding */
   justify-content: space-evenly;
-  color:#94FFD8;
+  color: #94FFD8;
 }
-
 
 @media (max-width: 768px) {
   h1 {
-      font-size: 3rem; /* Smaller font size for mobile */
-      padding: 10px 0;
+    font-size: 3rem; /* Smaller font size for mobile */
+    padding: 10px 0;
   }
 
   #Experience {
-      padding: 5rem 5% 2rem; /* Adjust padding for mobile */
+    padding: 5rem 5% 2rem; /* Adjust padding for mobile */
   }
 
   .experience-container {
-      flex-direction: column; /* Stack sidebar and content vertically */
+    flex-direction: column; /* Stack sidebar and content vertically */
   }
 
   .sidebar {
-      width: 100%; /* Full width for sidebar on mobile */
-      padding: 10px;
+    width: 100%; /* Full width for sidebar on mobile */
+    padding: 10px;
   }
 
   .content {
-      padding: 20px;
-      font-size: medium; /* Adjust font size for mobile */
+    padding: 20px;
+    font-size: medium; /* Adjust font size for mobile */
   }
 }

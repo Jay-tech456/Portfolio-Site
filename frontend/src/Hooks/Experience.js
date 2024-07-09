@@ -1,6 +1,7 @@
 const experience = {
     kismet: {
-      title: "Fullstack Engineer March 2024 - Present",
+      title: "Fullstack Engineer", 
+      date: "March 2024 - Present", 
       description: [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -16,19 +17,22 @@ const experience = {
     },
     glocal: {
       title: "Software Engineer",
-      description: [
-        "Worked on various projects to improve user experience and backend systems."
-      ],
+      date:"September 2023 - May 2024", 
+      description:  [
+        "Joined Glocal on September 15, 2023, as a member of the Backend Development, DevOps, API, and the official facilitator of the Artificial Intelligence team.",
+        "Collaborated effectively with fellow software engineers to containerize the application using Docker, enhancing scalability and deployment efficiency."
+    ], 
       technologies: [
-        "Node.js",
-        "Express.js",
-        "MongoDB",
+        "Java",
+        "Grails",
+        "API",
         "Docker",
-        "Kubernetes"
+        "RAG Chatbot"
       ]
     },
     infosys: {
-      title: "Associate Software Engineer Jun 2022 - Aug 2023",
+      title: "Associate Software Engineer",
+      date: "Jun 2022 - Aug 2023", 
       description: [
         "Engineered various high-speed network protocols using SOAP, GraphQL, RESTful, and gRPC APIs using an efficient Java-based Object Relational Mapping (ORM) and Object-Oriented Programming (OOPS) techniques for various modern SaaS product at scale. Achieved a consistent 15% reduction in latency and enhanced scalability for modern core services integrating SQL, H2, and NoSQL databases.", 
   
@@ -45,6 +49,7 @@ const experience = {
     },
     freelancer: {
       title: "Fullstack Freelancer ",
+      date:"October 2021 - May 2022", 
       description: [
         "Engineered the development of highly responsive and dynamic user interfaces for web applications using ReactJS, NodeJS, JavaScript, elevating user experience and engagement metrics by 30%.", 
         "Engineered and optimized numerous high-impact web applications for small enterprises, employing a versatile toolkit across REST, Microservices, Monolithic, and Full Stack architectures; achieved a 25% improvement in functionality, specifically elevating the performance of custom rendering engines."
