@@ -3,6 +3,8 @@ import { MongoClient } from "mongodb";
 import express from "express"; 
 import dotenv from "dotenv"; 
 import cors from "cors"; 
+import aboutRouter from "./routes/aboutPath.mjs";
+import expreienceRouter from "./routes/experiencePath.mjs";
 
 dotenv.config();
 const app = express();
@@ -28,7 +30,6 @@ let db;
 async function startServer() {
     try {
         await client.connect();
-        console.log("Connected to MongoDB Atlas");
         db = client.db("PersonalProjects");
         app.listen(port, () => {
             console.log(`Server running on port ${port}`);
@@ -40,3 +41,6 @@ async function startServer() {
 }
 
 startServer()
+
+app.use('/api', aboutRouter);
+app.use('/api', expreienceRouter); 
