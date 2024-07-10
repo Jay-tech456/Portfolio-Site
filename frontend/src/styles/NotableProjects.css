@@ -1,20 +1,16 @@
-/* Centering the card */
+
 .center-container {
   display: flex;
   text-align: center;
   align-items: center;
   height: 59vh;
-  
-  
 }
 
 .project-card {
   background-color: #0a192f;
   color: #ccd6f6;
- 
   border-radius: 10px;
   max-width: 600px;
-
   z-index: 1;
   
 }

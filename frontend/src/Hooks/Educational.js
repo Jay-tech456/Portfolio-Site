@@ -14,7 +14,7 @@ const educational = [
     "institution": "Udemy Bootcamp",
     "year": "Winter 2023 - Spring 2024",
     "degree": "The Complete 2024 Web Development Bootcamp",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolorem harum dolorum debitis. Magni, iste! Perferendis laborum reprehenderit dolorum totam."
+    "description": "Engineered various Web 1.0, 2.0, and 3.0 sites using the robust PostgreSQL, Express, React, and Node.js (PERN) stack, showcasing full-stack proficiency."
   },
   {
     "institution": "California State University, East Bay",

@@ -36,7 +36,6 @@
     color: #ddd;
 }
 
-/* Media Query for Mobile Responsiveness */
 @media (max-width: 768px) {
     .icon-navbar {
         width: 60px; /* Adjust width for smaller screens */
