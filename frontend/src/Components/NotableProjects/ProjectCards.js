@@ -15,7 +15,7 @@ export default function ProjectCards({ image, alt, title, description, githubLin
     <>
     <div className="center-container">
             <div >
-        <Typography variant="h2" component="div" className="project-title">
+        <Typography variant="h1" component="div" className="project-title">
           {title}
         </Typography>
         <Card className="project-card" sx={{ backgroundColor: '#0a192f', color: '#ccd6f6', padding: '20px', borderRadius: '10px', maxWidth: '600px' }}>

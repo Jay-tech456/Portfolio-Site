@@ -106,6 +106,7 @@ const experienceData = async () => {
     }
   } catch (e) {
     console.log("There is an error: ", e);
+    return experience
   }
 };
 

@@ -1,7 +1,3 @@
-section {
-    min-height: 90vh;
-    padding: 10rem 9% 2rem;
-}
 
 .About {
     display: flex;
@@ -17,9 +13,11 @@ section {
 .about-content h1 {
     position: relative;
     display: inline-block;
-    font-size: 5.12rem; 
+    font-size: 5.12rem;
     font-weight: 700;
     line-height: 1.3;
+    text-align: center;
+
 }
 
 .about-content p {
@@ -29,12 +27,13 @@ section {
 }
 
 .about-content p span {
-    color: #94FFD8;
+    color: var(--third-color)
 }
 
 .main-container {
     display: flex;
 }
+
 .profile-image {
     position: relative;
     display: inline-block;
@@ -47,6 +46,7 @@ section {
     position: relative;
     z-index: 1;
 }
+
 .forward-circle-spin {
     position: absolute;
     top: 22%;
@@ -67,65 +67,61 @@ section {
     animation-duration: 8s;
 }
 
-.circle-spin-green{
+.circle-spin-green {
     width: 105%;
     height: 46%;
-    border-left: .2rem solid #94FFD8;
-    border-right: .2rem solid #94FFD8;
+    border-left: .2rem solid var(--third-color);
+    border-right: .2rem solid var(--third-color);
     animation-duration: 3s;
     animation-direction: reverse;
 }
+
 .circle-spin-yellow {
     width: 125%;
     height: 55%;
-    border-left: .2rem solid #F9E2AF;
-    border-right: .2rem solid #F9E2AF;
+    border-left: .2rem solid var(--yellow-highlight); 
+    border-right: .2rem solid var(--yellow-highlight); 
     animation-duration: 5s;
     animation-direction: reverse;
 }
+
 @keyframes aboutSpinner {
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
-
-
-/* Combined Media Query for Mobile Responsiveness */
-@media (max-width: 768px) {
-    section {
-        padding: 5rem 5% 2rem;
-    }
-
+@media (max-width: 430px) {
+  
     .About {
         flex-direction: column;
         align-items: center;
     }
 
     .about-content h1 {
-        font-size: 3rem;
+        font-size: 3rem; 
     }
 
     .about-content p {
-        font-size: 1.2rem;
-        margin: 1.5rem 0 3rem;
-    }
-
-    .profile-image {
-        margin-left: 0;
-        margin-top: 2rem;
+        font-size: 1.5rem;
         text-align: center;
     }
 
-    .profile-image img {
-        width: 80%;
-        max-width: 300px;
-    }
-    .profile-image .circle-spin{ 
-        display: none;
+    .profile-image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-left: 20px;
     }
 
-    .content {
-        padding-left: 80px;
+    .profile-image img {
+        width: 80%; 
+    }
+
+    .forward-circle-spin {
+        top: 50%;
+        left: 40%;
+        width: 300px; 
+        height: 50%;
     }
 }

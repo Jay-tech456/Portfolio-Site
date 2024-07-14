@@ -1,16 +1,22 @@
 .icon-navbar {
     position: fixed;
+
+
+
+    /* The Css that helps it stay in the bottom of the page  */
     bottom: 0;
     left: 0;
-    width: 80px; /* Adjust the width as needed */
+
+    /* ******************************************** */
+    width: 80px; 
     height: auto;
-    display: flex;
+ 
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    background: var(--bg-color); /* Ensure background color is consistent */
+    background: var(--bg-color);
 }
 
 .icon-navbar ul {
@@ -19,8 +25,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 0;
-    margin: 0;
+  
 }
 
 .icon-navbar li {
@@ -28,7 +33,7 @@
 }
 
 .icon-navbar a {
-    color: #94FFD8;
+    color: var(--third-color);
     font-size: 2rem;
 }
 
@@ -36,32 +41,8 @@
     color: #ddd;
 }
 
-@media (max-width: 768px) {
+@media ( max-width: 430px) {
     .icon-navbar {
-        width: 60px; /* Adjust width for smaller screens */
-        padding: 15px 0;
-    }
-
-    .icon-navbar a {
-        font-size: 1.5rem; /* Adjust icon size for smaller screens */
-    }
-
-    .icon-navbar li {
-        margin: 15px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .icon-navbar {
-        width: 50px; /* Further adjust width for very small screens */
-        padding: 10px 0;
-    }
-
-    .icon-navbar a {
-        font-size: 1.2rem; /* Further adjust icon size for very small screens */
-    }
-
-    .icon-navbar li {
-        margin: 10px 0;
+        display: none;
     }
 }

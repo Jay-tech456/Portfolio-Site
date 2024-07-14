@@ -12,6 +12,8 @@ export default function Experience() {
       try {
         const response = await experienceData();
           setExperiences(response);
+
+            // The first experience should be Kismet
           setCurrentExperience(response[0]);
         } catch (e) {
         console.log("There is an error that occurred: ", e);
@@ -26,7 +28,7 @@ export default function Experience() {
     if (selectedExperience === currentExperience) {
       return;
     }
-    setFade(true);
+    setFade(true);                
     setTimeout(() => {
       setCurrentExperience(selectedExperience);
       setFade(false);
@@ -47,6 +49,7 @@ export default function Experience() {
           </div>
           {currentExperience && (
             <div className={`content ${fade ? 'fade-out' : 'fade-in'}`}>
+              
               <h3 className="date">{currentExperience.date}</h3>
               <h2>{currentExperience.title}</h2>
               <ul className="Description">
@@ -56,7 +59,7 @@ export default function Experience() {
               </ul>
               {currentExperience.technologies && (
                 <>
-                  <h3>Technologies I have worked with:</h3>
+                  <h3 className = "work-stack">Technologies I have worked with:</h3>
                   <ul className="tools">
                     {currentExperience.technologies.map((tech, index) => (
                       <li key={index}>{tech}</li>

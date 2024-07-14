@@ -11,15 +11,14 @@
   transform: translateY(0);
 }
 
-/* Additional styles for project components */
-#Project {
+#project {
   padding: 20px;
   color: white;
   min-height: 90vh;
   padding: 10rem 9% 2rem;
 }
 
-#Project h1 {
+#project h1 {
   position: relative;
   display: inline-block;
   font-size: 5.12rem;

@@ -7,7 +7,7 @@ export default function About() {
     return ( 
         <section className="About show-animate" id="About">
             <div className="about-content">
-                <h1 className="AboutME">01. About Me</h1>
+                <h1 className="AboutMe">01. About Me</h1>
                 {AboutData.description.map((desc, index) => (
                     <p key={index}>
                         {desc}
@@ -15,7 +15,7 @@ export default function About() {
                     </p>
                 ))}
                 <p>
-                    <span>Some of the technologies that I have worked with recently:</span>
+                    <span>My Recent Technology Stack:</span>
                     <ul className="tools">
                         {AboutData.tools.map((tool, index) => (
                             <li key={index}>{tool}</li>

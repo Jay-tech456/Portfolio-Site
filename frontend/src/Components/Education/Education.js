@@ -15,7 +15,7 @@ export default function Education() {
     const fetchEducationData = async () => {
       try {
         const result = await EducationalComponent();
-        setEducationData(result || []); // Ensure result is an array
+        setEducationData(result || []); 
       } catch (e) {
         console.log("Error in UseEffect", e);
         setEducationData([]); // Set an empty array on error

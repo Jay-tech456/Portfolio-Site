@@ -28,8 +28,8 @@ export default function Project() {
 
   return (
     <div ref={projectRef}>
-      <section id="Project">
-        <h1 className="Project">0.3 Stuff I Built</h1>
+      <section id="project" className="project">
+        <h1 >0.3 Stuff I Built</h1>
         {projectDataArr.length > 0 ? (
           projectDataArr.map((project, index) => (
             <div className="project-content" key={index}>

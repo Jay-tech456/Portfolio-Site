@@ -1,31 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap');
 
 
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: var(--bg-color);
-    color: var(--text-color);
-}
-
-.logo {
+.logo-image {
     position: relative;
     font-size: 4rem;
-    color: #94FFD8;
     font-weight: 600;
     animation: slideRight 1s ease forwards;
     height: 130px;
-    margin: 0%;
+
 }
 
+/* to adjust the content inside the navbar itself */
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--bg-color);
+    background:rgba(8, 27, 41, .8);
     padding: 1rem 2rem;
-    z-index: 1000;
+    z-index: 100;
     position: fixed;
     top: 0;
     width: 100%;
@@ -51,17 +43,17 @@ body {
     color: var(--main-color);
 }
 
-#menu-icon {
-    display: none;
-    font-size: 3rem;
-    cursor: pointer;
-    color: var(--text-color);
-}
 
+#menu-icon {
+  display: none;
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
 /* ****************** Resume Button ********************** */
 .Resume {
     outline-style: solid;
-    outline-color: #94FFD8;
+    outline-color: var(--third-color);
     width: 80%; 
     padding: 10px;
 }
@@ -78,32 +70,27 @@ body {
     }
 }
 
+@media (max-width: 430px) {
+    .navbar {
+        display: none;
+    }
 
-/* Make the app mobile friendly */
-@media (max-width: 768px) {
-    #menu-icon {
+    .bx-menu {
+        display: none;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 400px;
+    }
+
+    .logo-image {
+        margin: 0 auto;
+    }
+    .navbar-container{ 
+        height: 100px;
         display: block;
     }
-
-    .navbar {
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: -100%;
-        width: 100%;
-        padding: 2rem;
-        background: var(--second-bg-color);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-        transition: left 0.3s;
-    }
-
-    .navbar.active {
-        left: 0;
-    }
-
-    .navbar a {
-        margin: 1rem 0;
-        font-size: 2rem;
-    }
-
 }
