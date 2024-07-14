@@ -19,13 +19,35 @@ const ProjectsInfo = [
         imageUrl: 'https://github.com/Jay-tech456/Blockchain-Token-OAT/blob/main/demoImage.png?raw=true',
         description: ['Developed a decentralized blockchain token for a DeFi app, enabling users to transfer, claim, and trade digital assets. Achieved 99.9% uptime with an average transaction confirmation time of 2 seconds, capable of serving over 10,000 active users.'], 
         toolStack: ['JavaScript', 'React', 'Motoko', 'HTML5/CSS3', 'Blockchain']
-    },
-    {
-        title: 'Foodie Review Web App',
-        imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2Fhemachandarn%2FYelp-Dataset&psig=AOvVaw028VYEn4Vhax-F5uQCmhF6&ust=1720653703010000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCID7wdeMm4cDFQAAAAAdAAAAABAE',
-        description: 'Deployed cloud infrastructure (MongoDB Atlas) to streamline database operations, ensuring high performance and availability while reducing operational complexities associated with local databases; leading to a uniform collaboration .', 
-        toolStack: ['MongoDB Atlas', 'Express', 'React.js', 'Node.js', 'Postman', 'Figma', 'Docker']
     }
 ];
 
-export default ProjectsInfo;
+const projectData = async () =>{ 
+
+    try{ 
+        const response = await fetch(`http://localhost:5001/api/project`, 
+            {
+            method:"GET", 
+            headers:{ 
+                "Content-Type":"application/json", 
+
+            }
+        }) 
+
+        if(response.ok){ 
+            const data = await response.json(); 
+            return data;
+        } else { 
+            console.log("Failed to fetch project Information")
+            return ProjectsInfo ; 
+        }
+    }catch(e){ 
+        console.log("Error: ", e)
+        return ProjectsInfo;
+    }
+
+
+}
+
+
+export default projectData ;

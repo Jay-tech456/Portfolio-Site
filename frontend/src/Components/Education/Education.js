@@ -1,13 +1,29 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import '../../styles/Education.css';
 import EducationContent from './EducationContent';
 import useScrollAnimation from '../../Hooks/useScrollAnimation';
-import educational from '../../Hooks/Educational';
+import EducationalComponent from '../../Hooks/Educational'; 
 
 export default function Education() {
   const educationRef = useRef(null);
 
   useScrollAnimation(educationRef);
+
+  const [educationData, setEducationData] = useState([]); // Initialize as an empty array
+
+  useEffect(() => {
+    const fetchEducationData = async () => {
+      try {
+        const result = await EducationalComponent();
+        setEducationData(result || []); // Ensure result is an array
+      } catch (e) {
+        console.log("Error in UseEffect", e);
+        setEducationData([]); // Set an empty array on error
+      }
+    };
+
+    fetchEducationData();
+  }, []);
 
   return (
     <section className="education" id="education" ref={educationRef}>
@@ -15,18 +31,22 @@ export default function Education() {
       <div className="education-row">
         <div className="education-column">
           <div className="education-box">
-            {educational.map((edu, index) => (
-              <div className="education-content" key={index}>
+            {educationData.length > 0 ? (
+              educationData.map((edu, index) => (
+                <div className="education-content" key={index}>
                 <EducationContent
                   year={edu.year}
                   degree={edu.degree}
-                  institution = {edu.institution}
+                  institution={edu.institution}
                   description={edu.description}
-                  coursework = {edu.coursework}
-                  extraciriculat= {edu.extracurricular}
+                  coursework={edu.coursework}
+                  extracurricular={edu.extracurricular}
                 />
               </div>
-            ))}
+              ))
+            ) : (
+              <p>No education data available</p>
+            )}
           </div>
         </div>
       </div>
