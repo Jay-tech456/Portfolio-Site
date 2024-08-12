@@ -5,7 +5,7 @@ const educational = [
     degree: "Master of Science in Engineering",
     coursework: [
       "Enterprise Software Platform",
-      "Special Topics in Emerging Technologies - Cybersecurity",
+      "Emerging Technologies - Cybersecurity",
       "Systems Engineering",
       "Engineering Analysis"
     ]

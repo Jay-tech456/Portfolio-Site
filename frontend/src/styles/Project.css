@@ -1,3 +1,4 @@
+/* Project Container and Header Animations */
 .project-content,
 .project-header {
   opacity: 0;
@@ -11,11 +12,11 @@
   transform: translateY(0);
 }
 
+/* Project Section Styling */
 #project {
-  padding: 20px;
+  padding: 10rem 9% 2rem;
   color: white;
   min-height: 90vh;
-  padding: 10rem 9% 2rem;
 }
 
 #project h1 {
@@ -27,6 +28,7 @@
   margin-bottom: 40px;
 }
 
+/* Project Container Layout */
 .project-container {
   display: flex;
   align-items: center;
@@ -52,6 +54,7 @@
   order: 1;
 }
 
+/* Project Image Styling */
 .project-image {
   position: relative;
   z-index: 1;
@@ -64,6 +67,7 @@
   object-fit: cover;
 }
 
+/* Project Info Styling */
 .project-info {
   padding: 10px;
   background-color: rgba(17, 46, 66, 0.3);
@@ -80,6 +84,7 @@
   font-size: 2rem;
 }
 
+/* Project Toolstack Styling */
 .project-toolstack {
   margin-top: 10px;
   font-size: 2rem;
@@ -99,4 +104,79 @@
 
 .project-toolstack ul li:last-child {
   margin-right: 0;
+}
+
+/* Show Projects Button */
+.show-projects-button {
+  display: none;
+  background-color: #0a192f;
+  color: #ccd6f6;
+  border: 2px solid #ccd6f6;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px auto;
+}
+
+@media (max-width: 430px) {
+  #project {
+    padding: 5rem 5% 1rem;
+  }
+
+  #project h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .project-container {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .project-container.left .project-info,
+  .project-container.right .project-info {
+    order: 2;
+    margin-left: 0;
+  }
+
+  .project-container.left .project-image,
+  .project-container.right .project-image {
+    order: 1;
+    margin-left: 0;
+  }
+
+  .projectImg {
+    height: 15rem;
+    width: 15rem;
+    margin-bottom: 20px;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+  }
+
+  .project-description,
+  .project-toolstack {
+    font-size: 1.5rem;
+  }
+
+  .project-toolstack ul {
+    flex-direction: column;
+  }
+
+  .project-toolstack ul li {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .project-toolstack ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  .show-projects-button {
+    display: block;
+  }
 }

@@ -9,52 +9,43 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 import "../../styles/NotableProjects.css"; 
 
-export default function ProjectCards({ image, alt, title, description, githubLink, projectLink, authors}) {
+export default function ProjectCards({ image, alt, title, description, githubLink, projectLink, authors }) {
   return (
-
-    <>
     <div className="center-container">
-            <div >
-        <Typography variant="h1" component="div" className="project-title">
-          {title}
-        </Typography>
-        <Card className="project-card" sx={{ backgroundColor: '#0a192f', color: '#ccd6f6', padding: '20px', borderRadius: '10px', maxWidth: '600px' }}>
-        <Typography variant="body2" className="project-description" sx = {{maxWidth: '600px', zIndex: 1
-        }}>
+      <div className="project-content-wrapper">
+        <Card className="notable-project-card" sx={{ backgroundColor: '#0a192f', color: '#ccd6f6', padding: '20px', borderRadius: '10px', maxWidth: '600px' }}>
+          <CardMedia
+            component="img"
+            height="410px"
+            image={image}
+            alt={alt}
+            className="notable-project-image"
+          />
+        </Card>
+        <div>
+          <Typography variant="h1" component="div" className="notable-project-title">
+            {title}
+          </Typography>
+          <Typography variant="body2" className="notable-project-description" sx={{ maxWidth: '600px', zIndex: 1 }}>
             {description}
           </Typography>
-          </Card>
-
-         <div className='authors'>
-         <span >Co-Authors: {authors}
-         </span>
-         </div>
-          <div className="project-links">
+          <div className="authors">
+            <span>Co-Authors: {authors}</span>
+          </div>
+          <div className="notable-project-links">
             <Link href={githubLink} target="_blank" rel="noopener">
               <IconButton aria-label="github" className="project-icon" sx={{ color: '#ccd6f6' }}>
-                <GitHubIcon sx= {{size:'medium'}}/>
+                <GitHubIcon />
               </IconButton>
             </Link>
             <Link href={projectLink} target="_blank" rel="noopener">
-              <IconButton aria-label="project" className="project-icon" sx={{ color: '#ccd6f6', size:'large'}}>
+              <IconButton aria-label="project" className="project-icon" sx={{ color: '#ccd6f6' }}>
                 <OpenInNewIcon />
               </IconButton>
             </Link>
           </div>
         </div>
-      <Card className="project-card" sx={{ backgroundColor: '#0a192f'}}>
-        <CardMedia
-          component="img"
-          height="410px"
-          image={image}
-          alt={alt}
-          className="project-image"
-        />
-        
-      </Card>
-
+      </div>
     </div>
-    
-    </>
   );
 }

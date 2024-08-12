@@ -8,7 +8,7 @@ import Experience from './Components/Experience';
 import Project from "./Components/Project/Project"; 
 import NotableProjects from './Components/NotableProjects/NotableProjects';
 import Eduction from './Components/Education/Education';
-
+import Footer from './Components/Footer.js'
 const App = () => {
   return (
     <div className="main-container">
@@ -21,6 +21,7 @@ const App = () => {
          <Eduction />
         <Project />
         <NotableProjects />
+        <Footer />
       </div>
     </div>
   );
