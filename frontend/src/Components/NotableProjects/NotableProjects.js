@@ -15,7 +15,7 @@ function NotableProjects() {
   }, []);
 
   return (
-    <section id="NotableProject">
+    <section id="NotableProject" classname = "NotableProject">
       <h1 className='notable-project-header'>Research is Fun</h1>
       <div className="notable-projects">
         {projects.map((data, index) => (
