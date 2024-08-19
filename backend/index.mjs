@@ -30,7 +30,7 @@ let db;
 async function startServer() {
     try {
         await client.connect();
-        db = client.db("PersonalProjects");
+        db = client.db("WebPortfolio");
         app.listen(port, () => {
             console.log(`Server running on port ${port}`);
         });
