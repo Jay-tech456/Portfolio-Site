@@ -1,12 +1,12 @@
 const experience = [
   {
       "_id": "668f299b066f4dd31026a35e",
-      "company": "Kismet",
+      "company": "Kismet XYZ Inc.",
       "title": "Fullstack Engineer",
       "date": "March 2024 - Present",
       "description": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "Designing and programming the back-end to Company's proprietary sensor data web-based dashboard that would provide real-time monitoring insights for natural gas well operators.",
+          "Collaborating with hardware teams, computer scientists, and executives on product needs from oil & gas user perspectives to improve the Company's reporting capabilities on pressure, temperature, flow rate, and moisture (H20) data insights."
       ],
       "technologies": [
           "Amazon Web Service (AWS)",
