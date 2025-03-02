@@ -1,7 +1,7 @@
 const experience = [
   {
       "_id": "668f299b066f4dd31026a35e",
-      "company": "Kismet",
+      "company": "Kismet XYZ Inc.",
       "title": "Fullstack Engineer",
       "date": "March 2024 - Present",
       "description": [
