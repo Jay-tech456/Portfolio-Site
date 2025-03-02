@@ -1,62 +1,41 @@
-import { useEffect, useRef } from 'react';
+// src/Hooks/useTypewriter.js
+import { useState, useEffect, useRef } from 'react';
 
-const useTypewriter = (elementRef, toRotate, period) => {
+const useTypewriter = (text, speed = 100) => {
+  const [typedText, setTypedText] = useState('');
+  const index = useRef(0);
+  const timeoutRef = useRef(null);
+  const elementRef = useRef(null);
+
   useEffect(() => {
-    class TxtType {
-      constructor(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-      }
-
-      tick() {
-        const i = this.loopNum % this.toRotate.length;
-        const fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startTyping();
         }
-
-        this.el.innerHTML = `<span class="wrap">${this.txt}</span>`;
-
-        let delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-          delta = this.period;
-          this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-          this.isDeleting = false;
-          this.loopNum++;
-          delta = 500;
-        }
-
-        setTimeout(() => {
-          this.tick();
-        }, delta);
-      }
-    }
+      },
+      { threshold: 0.1 }
+    );
 
     if (elementRef.current) {
-      const element = elementRef.current;
-      const toRotateParsed = JSON.parse(toRotate);
-      if (toRotateParsed) {
-        new TxtType(element, toRotateParsed, period);
-      }
+      observer.observe(elementRef.current);
     }
 
-    // INJECT CSS
-    const css = document.createElement("style");
-    css.type = "text/css";
-    document.body.appendChild(css);
-  }, [elementRef, toRotate, period]);
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
+  const startTyping = () => {
+    if (index.current < text.length) {
+      setTypedText((prev) => prev + text.charAt(index.current));
+      index.current += 1;
+      timeoutRef.current = setTimeout(startTyping, speed);
+    }
+  };
+
+  return { typedText, elementRef };
 };
 
 export default useTypewriter;

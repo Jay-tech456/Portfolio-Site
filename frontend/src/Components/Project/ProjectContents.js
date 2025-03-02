@@ -4,10 +4,12 @@ import OpenD from "../Images/OpenD.gif"
 import Foodie from "../Images/Foodie.gif"
 import OAT from "../Images/OAT.gif"
 import Keeper from "../Images/Keeper.gif"
+import Foodielogo1 from "../Images/Foodielogo1.gif"
 export default function ProjectContents({ title, imageUrl, description, toolStack, floatDirection }) {
     const images = { 
+        Foodie: Foodielogo1,
         OpenD: OpenD, 
-        Foodie: Foodie, 
+        // Foodie: Foodie, 
         OAT: OAT, 
         Keeper:Keeper
     }

@@ -5,9 +5,10 @@ const educational = [
     degree: "Master of Science in Engineering",
     coursework: [
       "Enterprise Software Platform",
-      "Emerging Technologies - Cybersecurity",
+      "Emerging Technologies - Cybersecurity/LLM Agents",
       "Systems Engineering",
-      "Advance Data Mining"
+      "Advanced Data Mining", 
+      "Machine Learning in Graphs"
     ]
   },
   {

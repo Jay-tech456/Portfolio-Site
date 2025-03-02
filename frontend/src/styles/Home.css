@@ -46,6 +46,11 @@
 }
 
 
+.text-animate h3 {
+    position: relative;
+    display: inline-block;
+  }
+ 
 
 .home-content .text-animate h3::before {
     content: '';

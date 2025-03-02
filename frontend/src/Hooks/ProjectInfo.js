@@ -3,6 +3,13 @@
 
 const ProjectsInfo = [
     {
+        title: 'Foodie Bot - The First Food Recommendation Agent ',
+        imageUrl: 'Foodie',
+        description: ["Collaborated with a cross-functional team to develope the first commercial RAG system combating decision fatigue in dining choices, deployed to 15K+ active users. Engineered retrieval pipeline achieving 92% recommendation accuracy via hybrid Yelp graph data (10M+ nodes) + LLaMA-3 embeddings", 
+        ],  
+        toolStack: ['MERN Stack', 'AWS', 'Agent', 'Mistral AI', 'Langchain']
+    },
+    {
         title: 'OpenD - Modern Web 3.0 E-Commerce Market',
         imageUrl: "OpenD",
         description: 'Engineered the creation of a decentralized NFT Marketplace e-commerce replica, empowering users to seamlessly mint, list, and trade Non-Fungible Tokens (NFTs) on the ICP network, revolutionizing the digital asset landscape. Achieved remarkable results, including a consistent transaction processing time and a staggering 75% increase in UI/UX, highlighting the transformative on the digital marketplace ecosystem.', 

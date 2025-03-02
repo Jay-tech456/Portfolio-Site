@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Navbar.css";
 import Logo from "./Images/MPLogo.png";
+import Resume from "../Resume/Resume.pdf"; // Ensure this is a valid PDF file path
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
@@ -28,27 +29,36 @@ export default function Navbar() {
   }, []);
 
   const handleClick = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(sectionId);
+    if (sectionId === "resume") {
+      // Create a temporary link to trigger the download
+      const link = document.createElement("a");
+      link.href = Resume;
+      link.download = "My_Resume.pdf"; // Customize the file name
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setActiveSection(sectionId);
+      }
     }
   };
 
   return (
     <div className="navbar-container">
-        <div className="logo" > 
-      <span className="animate" style={{ "--i": 1 }}>
-        <img className = "logo-image"src={Logo} alt="Logo" />
-      </span>
+      <div className="logo">
+        <span className="animate" style={{ "--i": 1 }}>
+          <img className="logo-image" src={Logo} alt="Logo" />
+        </span>
       </div>
 
-      <div className="bx bx-menu" >
+      <div className="bx bx-menu">
         <span className="animate" style={{ "--i": 2 }}></span>
       </div>
 
       <nav className="navbar">
-
         <a
           href="#about"
           className={activeSection === "home" ? "active" : ""}
@@ -57,8 +67,8 @@ export default function Navbar() {
           About
         </a>
         <a
-          href="#Experience"
-          className={activeSection === "Experience" ? "active" : ""}
+          href="#experience"
+          className={activeSection === "experience" ? "active" : ""}
           onClick={() => handleClick("experience")}
         >
           Experience
