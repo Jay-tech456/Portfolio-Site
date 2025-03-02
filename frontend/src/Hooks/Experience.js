@@ -5,8 +5,8 @@ const experience = [
       "title": "Fullstack Engineer",
       "date": "March 2024 - Present",
       "description": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "Designing and programming the back-end to Company's proprietary sensor data web-based dashboard that would provide real-time monitoring insights for natural gas well operators.",
+          "Collaborating with hardware teams, computer scientists, and executives on product needs from oil & gas user perspectives to improve the Company's reporting capabilities on pressure, temperature, flow rate, and moisture (H20) data insights."
       ],
       "technologies": [
           "Amazon Web Service (AWS)",
@@ -62,15 +62,15 @@ const experience = [
       ],
       "technologies": [
           "Python",
-          "Django",
-          "PostgreSQL",
+          "MERN Stack",
+          "PERN Stack",
           "AWS"
       ]
   },
   {
       "_id": "668f2a3a3a42fa64b56dc8d3",
       "company": "RippleMatch",
-      "title": "Leadership Internship",
+      "title": "Leadership Development Internship",
       "date": "January 2022 - May 2022",
       "description": [
           "Selected from a pool of thousands of candidates to work closely with leaders of RippleMatch’s Leadership Team.",

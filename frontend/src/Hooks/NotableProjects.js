@@ -12,7 +12,7 @@ const NotableProjectsData = [
         image: "https://ibagroupit.com/wp-content/uploads/2020/06/computer-vision.gif",
         alt: "Spotify Profile",
         title: "Computer Vision Research",
-        description: "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+        description: "A comprehensive research paper that explores the advancements in Computer Vision technology and its implications on the decline of Amazon Go stores, analyzing the challenges and limitations faced by the cashierless retail model.",
         githubLink: "https://github.com/jp-yuan/eng202",
         projectLink: "https://your-project-link",
         authors: "Manjesh Prasad, Shuzhu Chen, Duy-Anh Dang, and Nicolas Yang",

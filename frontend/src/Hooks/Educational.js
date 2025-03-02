@@ -7,7 +7,7 @@ const educational = [
       "Enterprise Software Platform",
       "Emerging Technologies - Cybersecurity",
       "Systems Engineering",
-      "Engineering Analysis"
+      "Advance Data Mining"
     ]
   },
   {

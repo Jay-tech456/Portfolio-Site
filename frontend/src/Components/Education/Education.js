@@ -55,7 +55,7 @@ export default function Education() {
           {showEducation ? 'Hide Education' : 'Show Education'}
         </button>
       )}
-      {(showEducation || !isSmallScreen) && ( // Ensure content shows on large screens
+      {(showEducation || !isSmallScreen) && (
         <div className="education-row">
           <div className="education-column">
             <div className="education-box">
