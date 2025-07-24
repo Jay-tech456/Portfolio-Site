@@ -6,7 +6,8 @@ function Router() {
     return ( 
         <div>
             <Routes>
-                <Route path="/about" element={<LandingPage/>} />
+                <Route path="" element={<LandingPage/>} />
+
             </Routes>
         </div>
     )

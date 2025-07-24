@@ -16,7 +16,6 @@ export default function Project() {
     const fetchProjectData = async () => {
       try {
         const result = await projectData();
-        console.log(result); // Add console log here
         setProjectDataArr(result || []);
       } catch (e) {
         console.log("There is an Error: ", e);
